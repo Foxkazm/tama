@@ -5,15 +5,16 @@ using UnityEngine;
 public class tabTracker : MonoBehaviour
 {
     string [] tab= new string []{"Food", "RG Light", "Play", "meds", "flush", "happiness", "disciplined", "attention"};
-    public SpriteRenderer [] tabVis;
+    public GameObject [] tabVis;
     private int tabNum=0;
     public string currentTab="Food";
      public int waitTime=0;
     // Start is called before the first frame update
     void Start()
     {
-        
-        turnOnOffRenderer(tabVis[0],true);
+        for(int i=1; i<=7; i++){
+        turnOnOff(tabVis[i],false);
+        }
     }
 
     // Update is called once per frame
@@ -23,7 +24,7 @@ public class tabTracker : MonoBehaviour
     }
     void moveTabs(){
         if(Input.GetKey(KeyCode.RightArrow) && waitTime<=0){
-            turnOnOffRenderer(tabVis[tabNum],false);
+            turnOnOff(tabVis[tabNum],false);
             tabNum++;
             if(tabNum>7){
                 tabNum=0;
@@ -35,7 +36,7 @@ public class tabTracker : MonoBehaviour
         }
         
         if(Input.GetKey(KeyCode.LeftArrow) && waitTime<=0){
-           turnOnOffRenderer(tabVis[tabNum],false);
+           turnOnOff(tabVis[tabNum],false);
             tabNum--;
             if(tabNum<0){
                 tabNum=7;
@@ -45,12 +46,10 @@ public class tabTracker : MonoBehaviour
             Debug.Log(currentTab);
             waitTime=100;
         }
-        turnOnOffRenderer(tabVis[tabNum],true);
+        turnOnOff(tabVis[tabNum],true);
         waitTime--;
     }
-    void turnOnOffRenderer(SpriteRenderer item, bool onOff){
-        SpriteRenderer rend=tabVis[tabNum];
-        
-        rend.enabled=onOff;
+    void turnOnOff(GameObject item, bool onOff){
+        item.SetActive(onOff);
    }
 }
