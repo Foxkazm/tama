@@ -2,32 +2,36 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class food : MonoBehaviour
+public class focusTab : MonoBehaviour
 {
-    public SpriteRenderer tab;
+    public tabTracker tabber;
     public GameObject canvas;
     public SpriteRenderer mon;
     bool menOn=false;
-    int waitTime=100;
+    public bool gameOver=true;
+    public int waitTime=100;
 
     // Update is called once per frame
     void Update()
     {
-        if(Input.GetKey(KeyCode.Space)&& waitTime<=0){
+        if(Input.GetKey(KeyCode.Space)&& waitTime<=0 && gameOver){
             tabOnOff();
-            waitTime=101;
+            waitTime=500;
         }
         waitTime--;
     }
-    void tabOnOff(){
+    public void tabOnOff(){
         if(menOn==false){
-            tab.enabled=false;
             canvas.SetActive(true);
             menOn=true;
+            tabber.stopMove=true;
+            gameOver=false;
         }else{
-            tab.enabled=true;
             canvas.SetActive(false);
             menOn=false;
+            tabber.stopMove=false;
+            gameOver=true;
+            waitTime=500;
         }
     }
 }

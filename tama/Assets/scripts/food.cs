@@ -2,15 +2,17 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class tabTracker : MonoBehaviour
+public class food : MonoBehaviour
 {
     public GameObject [] tabVis;
     private int tabNum=0;
-    public int waitTime=0;
+    public int waitTime=500;
     
-    public bool stopMove=false;
+    public focusTab focusScript;
+  
+    public GameObject foodAref;
+    public GameObject foodBref;
 
-    // Start is called before the first frame update
     void Start()
     {
         for(int i=1; i<=tabVis.Length-1; i++){
@@ -18,14 +20,34 @@ public class tabTracker : MonoBehaviour
         }
     }
 
-    // Update is called once per frame
+    
     void Update()
     {
             moveTabs();
-        
-    }
+        if(Input.GetKey(KeyCode.Space) && waitTime<=0){
+            if(tabNum==0){
+                Debug.Log("A");
+                Instantiate(foodAref,new Vector3(0,0,0),Quaternion.identity);
+                Debug.Log(tabNum+"");
+                waitTime=500;
+                focusScript.tabOnOff();
+                
+            }else if (tabNum==1){
+                Debug.Log("B");
+                Instantiate(foodBref,new Vector3(0,0,0),Quaternion.identity);
+                Debug.Log(tabNum+"");
+                waitTime=500;
+                focusScript.tabOnOff();
+
+            }
+            
+        }
+
+        }
+
+    
     void moveTabs(){
-        if(!stopMove){
+
             if(Input.GetKey(KeyCode.RightArrow) && waitTime<=0){
                 turnOnOff(tabVis[tabNum],false);
                 tabNum++;
@@ -50,10 +72,9 @@ public class tabTracker : MonoBehaviour
         turnOnOff(tabVis[tabNum],true);
         waitTime--;
         }
-    }
-    void turnOnOff(GameObject item, bool onOff){
-        item.SetActive(onOff);
+        void turnOnOff(GameObject item, bool onOff){
+            item.SetActive(onOff);
    }
-   
 
-}
+    }
+  
