@@ -9,14 +9,14 @@ public class focusTab : MonoBehaviour
     public SpriteRenderer mon;
     bool menOn=false;
     public bool gameOver=true;
-    public int waitTime=100;
+    public int waitTime=300;
 
     // Update is called once per frame
     void Update()
     {
         if(Input.GetKey(KeyCode.Space)&& waitTime<=0 && gameOver){
             tabOnOff();
-            waitTime=500;
+            waitTime=300;
         }
         waitTime--;
     }
@@ -31,7 +31,7 @@ public class focusTab : MonoBehaviour
             menOn=false;
             tabber.stopMove=false;
             gameOver=true;
-            waitTime=500;
+            waitTime=300;
         }
     }
 }

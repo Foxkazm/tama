@@ -1097,6 +1097,7 @@ GameObject:
   - component: {fileID: 541449064}
   - component: {fileID: 541449063}
   - component: {fileID: 541449065}
+  - component: {fileID: 541449066}
   m_Layer: 0
   m_Name: flushTab
   m_TagString: Untagged
@@ -1188,7 +1189,20 @@ MonoBehaviour:
   canvas: {fileID: 1312134263}
   mon: {fileID: 0}
   gameOver: 1
-  waitTime: 100
+  waitTime: 200
+--- !u!114 &541449066
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 541449062}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 77e3e104cbce7fe4687c03c540d09855, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  focus: {fileID: 541449065}
 --- !u!1 &623890914
 GameObject:
   m_ObjectHideFlags: 0
@@ -1429,7 +1443,6 @@ Transform:
   - {fileID: 1474526475}
   - {fileID: 1834545119}
   - {fileID: 1279004165}
-  - {fileID: 2037654221}
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1680,7 +1693,7 @@ MonoBehaviour:
   canvas: {fileID: 1025100329}
   mon: {fileID: 0}
   gameOver: 1
-  waitTime: 100
+  waitTime: 200
 --- !u!1 &1025100329
 GameObject:
   m_ObjectHideFlags: 0
@@ -2173,6 +2186,7 @@ GameObject:
   - component: {fileID: 1279004165}
   - component: {fileID: 1279004166}
   - component: {fileID: 1279004167}
+  - component: {fileID: 1279004168}
   m_Layer: 0
   m_Name: RG LightTab
   m_TagString: Untagged
@@ -2264,7 +2278,20 @@ MonoBehaviour:
   canvas: {fileID: 1278741461}
   mon: {fileID: 0}
   gameOver: 1
-  waitTime: 100
+  waitTime: 200
+--- !u!114 &1279004168
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1279004164}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 77e3e104cbce7fe4687c03c540d09855, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  focus: {fileID: 1279004167}
 --- !u!1 &1312134263
 GameObject:
   m_ObjectHideFlags: 0
@@ -2697,6 +2724,7 @@ GameObject:
   - component: {fileID: 1474526475}
   - component: {fileID: 1474526476}
   - component: {fileID: 1474526477}
+  - component: {fileID: 1474526478}
   m_Layer: 0
   m_Name: disciplineTab
   m_TagString: Untagged
@@ -2788,7 +2816,20 @@ MonoBehaviour:
   canvas: {fileID: 317513308}
   mon: {fileID: 0}
   gameOver: 1
-  waitTime: 100
+  waitTime: 200
+--- !u!114 &1474526478
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1474526474}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 77e3e104cbce7fe4687c03c540d09855, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  focus: {fileID: 1474526477}
 --- !u!1 &1601044280
 GameObject:
   m_ObjectHideFlags: 0
@@ -2816,7 +2857,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1601044280}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -3.56, y: -2.45, z: 9.985069}
+  m_LocalPosition: {x: -3.5599992, y: -2.4500003, z: 9.985069}
   m_LocalScale: {x: 2.3604527, y: 2.0410426, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -2892,7 +2933,7 @@ MonoBehaviour:
   canvas: {fileID: 645687327}
   mon: {fileID: 0}
   gameOver: 1
-  waitTime: 100
+  waitTime: 200
 --- !u!114 &1601044284
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3271,6 +3312,7 @@ GameObject:
   - component: {fileID: 1834545119}
   - component: {fileID: 1834545120}
   - component: {fileID: 1834545121}
+  - component: {fileID: 1834545122}
   m_Layer: 0
   m_Name: attentionTab
   m_TagString: Untagged
@@ -3362,7 +3404,20 @@ MonoBehaviour:
   canvas: {fileID: 197554312}
   mon: {fileID: 0}
   gameOver: 1
-  waitTime: 100
+  waitTime: 200
+--- !u!114 &1834545122
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1834545118}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 77e3e104cbce7fe4687c03c540d09855, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  focus: {fileID: 1834545121}
 --- !u!1 &1863571339 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5625541572516068495, guid: d85f9c5bb1408da42931f4f1aba3a380, type: 3}
@@ -3379,6 +3434,7 @@ GameObject:
   - component: {fileID: 1890326262}
   - component: {fileID: 1890326263}
   - component: {fileID: 1890326264}
+  - component: {fileID: 1890326265}
   m_Layer: 0
   m_Name: playTab
   m_TagString: Untagged
@@ -3470,7 +3526,20 @@ MonoBehaviour:
   canvas: {fileID: 1458581164}
   mon: {fileID: 0}
   gameOver: 1
-  waitTime: 100
+  waitTime: 200
+--- !u!114 &1890326265
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1890326261}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 77e3e104cbce7fe4687c03c540d09855, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  focus: {fileID: 1890326264}
 --- !u!1 &1930270463
 GameObject:
   m_ObjectHideFlags: 0
@@ -3482,6 +3551,7 @@ GameObject:
   - component: {fileID: 1930270464}
   - component: {fileID: 1930270465}
   - component: {fileID: 1930270466}
+  - component: {fileID: 1930270467}
   m_Layer: 0
   m_Name: medsTab
   m_TagString: Untagged
@@ -3573,7 +3643,20 @@ MonoBehaviour:
   canvas: {fileID: 623890914}
   mon: {fileID: 0}
   gameOver: 1
-  waitTime: 100
+  waitTime: 200
+--- !u!114 &1930270467
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1930270463}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 77e3e104cbce7fe4687c03c540d09855, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  focus: {fileID: 1930270466}
 --- !u!1 &1988399474
 GameObject:
   m_ObjectHideFlags: 0
@@ -3612,7 +3695,7 @@ MonoBehaviour:
   - {fileID: 1601044280}
   - {fileID: 1474526474}
   - {fileID: 1834545118}
-  waitTime: 0
+  waitTime: 200
   stopMove: 0
 --- !u!4 &1988399476
 Transform:
@@ -3929,12 +4012,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2037654220}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1.66, y: 0.84, z: 100}
-  m_LocalScale: {x: -26.14022, y: 12.4913, z: 1}
+  m_LocalPosition: {x: 0.01410755, y: 0.048091173, z: 90.01493}
+  m_LocalScale: {x: -20.140959, y: 10.10253, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 687087185}
-  m_RootOrder: 9
+  m_Father: {fileID: 0}
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &2037654222
 SpriteRenderer:
@@ -4019,6 +4102,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   happiness: 3
+  O: {fileID: 1468115454075989174, guid: 76083e9db7511b34ab435c8759e7b201, type: 3}
+  speed: 1
 --- !u!212 &2124053150
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -4079,7 +4164,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2124053148}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 6.99, y: -0.27, z: 0}
+  m_LocalPosition: {x: 7.09, y: 0.03, z: 0}
   m_LocalScale: {x: 2.7202, y: 2.7202, z: 2.7202}
   m_ConstrainProportionsScale: 0
   m_Children:
